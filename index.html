@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="tsd.png" type="image/png">
+    <title>John Harry - Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(180deg, #2e2e2e 0%, #121212 100%);
+            color: #e5e7eb;
+        }
+
+        .neon-text {
+            color: #00f9ff;
+            text-shadow: 0 0 2px #00f9ff, 0 0 5px #00f9ff;
+        }
+
+        .neon-button {
+            background: linear-gradient(45deg, #00f9ff, #ff007f);
+            border: 2px solid #00f9ff;
+            border-radius: 25px;
+            padding: 12px 24px;
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 0 0 8px #00f9ff;
+            transition: all 0.3s ease;
+        }
+
+        .neon-button:hover {
+            background: linear-gradient(45deg, #ff007f, #00f9ff);
+            box-shadow: 0 0 12px #ff007f;
+        }
+
+        .neon-box {
+            background: #121212;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 8px #00f9ff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .neon-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00f9ff;
+        }
+
+        .container-box {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 20px;
+            animation: slideIn 1s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Thicker Transparent Navbar */
+        nav {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        /* Mobile Menu Transparency */
+        #mobile-menu {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        /* Footer Styles */
+        footer {
+            padding: 24px 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Increased spacing between links */
+            margin-top: 8px;
+        }
+
+        .footer-link {
+            color: #e5e7eb; /* Matches section text color */
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #00f9ff; /* Neon cyan hover effect */
+            text-shadow: 0 0 2px #00f9ff, 0 0 5px #00f9ff; /* Matching neon text shadow */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .neon-box {
+                padding: 15px;
+            }
+            .container-box {
+                padding: 15px;
+            }
+            .footer-links {
+                gap: 20px; /* Reduced spacing for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-40 shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold neon-text">John Harry</a>
+            <button id="menu-toggle" class="md:hidden text-2xl text-white focus:outline-none">☰</button>
+            <div id="nav-links" class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link text-lg hover:text-[#00f9ff] transition-colors">Home</a>
+                <a href="#about" class="nav-link text-lg hover:text-[#00f9ff] transition-colors">About</a>
+                <a href="#projects" class="nav-link text-lg hover:text-[#00f9ff] transition-colors">Projects</a>
+                <a href="#skills" class="nav-link text-lg hover:text-[#00f9ff] transition-colors">Skills</a>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden w-full px-6 py-4 flex flex-col space-y-4">
+            <a href="#home" class="nav-link text-lg hover:text-[#00f9ff] transition-colors">Home</a>
+            <a href="#about" class="nav-link text-lg hover:text-[#00f9ff] transition-colors">About</a>
+            <a href="#projects" class="nav-link text-lg hover:text-[#00f9ff] transition-colors">Projects</a>
+            <a href="#skills" class="nav-link text-lg hover:text-[#00f9ff] transition-colors">Skills</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 py-16">
+        <div class="container-box">
+            <div class="neon-box text-center">
+                <img src="pfp.jpg" alt="Profile" class="mx-auto mb-6 rounded-full w-48 h-48 object-cover border-4 border-[#00f9ff]">
+                <h1 class="text-5xl font-bold mb-4 neon-text">John Harry D. Beato</h1>
+                <p class="text-xl text-gray-300 font-bold mb-6">Web Developer</p>
+                <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="mailto:johnharrybeato@gmail.com" class="neon-button">Get in Touch</a>
+                    <a href="JohnHarryBeato - Resume.pdf" class="neon-button">View Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold text-center mb-12 neon-text">About Me</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-2xl font-semibold mb-4 neon-text">Personal Information</h3>
+                <div class="neon-box">
+                    <h4 class="font-bold">John Harry D. Beato</h4>
+                    <p>09162805635</p>
+                    <p>johnharrybeato@gmail.com</p>
+                    <p>Cainta, Rizal</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold mb-4 neon-text">Education</h3>
+                <div class="neon-box">
+                    <h4 class="font-bold">Bachelors Degree</h4>
+                    <p>Computer Engineering</p>
+                    <p>Major in System and Network Administration</p>
+                    <p>Eastern Samar State University</p>
+                    <p>June 2024</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold mb-4 neon-text">Experience</h3>
+                <div class="neon-box">
+                    <h4 class="font-bold">Internship</h4>
+                    <p>Libreng Sakay Program</p>
+                    <p>City Population Office</p>
+                    <p>May - July 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold text-center mb-12 neon-text">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="neon-box">
+                <img src="ams.png" alt="Attendance Monitoring System" class="w-full h-48 object-contain rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-2xl font-bold mb-2 neon-text">Attendance Monitoring System</h3>
+                    <p class="mb-4"><strong>Description:</strong> An Attendance Monitoring System using RFID is a technology-based solution designed to track and manage the attendance of individuals within a specific environment of our school. It utilizes RFID cards issued to individuals, which are then scanned by RFID readers placed at entry. This system automatically records the presence or absence of individuals, providing accurate attendance data without the need for manual input.</p>
+                    <p class="text-lg"><strong>Programming Languages & Frameworks:</strong> JavaScript, Node.js, Express.js, PostgreSQL, and Amazon Web Services (AWS)</p>
+                    <div class="flex flex-col md:flex-row gap-4 mt-4">
+                        <a href="https://project1-live-preview.com" target="_blank" class="neon-button text-center">Live Preview</a>
+                        <a href="https://github.com/janedoe/project1" target="_blank" class="neon-button text-center">GitHub Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="neon-box">
+                <img src="lt.png" alt="Project 2" class="w-full h-48 object-contain rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-2xl font-bold mb-2 neon-text">Legislative Tracker</h3>
+                    <p class="mb-4"><strong>Description:</strong> The Legislative Tracker is a dynamic web application designed to help users monitor the progress of bills, ordinances, and resolutions through the legislative process. This tool offers a comprehensive and user-friendly interface, providing real-time updates and detailed information on legislative activities.</p>
+                    <p class="text-lg"><strong>Programming Languages & Frameworks:</strong> React.js, JavaScript, Node.js, Express.js</p>
+                    <p class="text-lg"><strong>Database & Cloud Services:</strong> PostgreSQL, Amazon Web Services (AWS)</p>
+                    <div class="flex flex-col md:flex-row gap-4 mt-4">
+                        <a href="https://project2-live-preview.com" target="_blank" class="neon-button text-center">Live Preview</a>
+                        <a href="https://github.com/janedoe/project2" target="_blank" class="neon-button text-center">GitHub Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold text-center mb-12 neon-text">Skills</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="neon-box">
+                <h3 class="text-2xl font-semibold mb-4 neon-text">Programming Languages</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="neon-text px-3 py-1 rounded-full">JavaScript</span>
+                    <span class="neon-text px-3 py-1 rounded-full">C++</span>
+                    <span class="neon-text px-3 py-1 rounded-full">Java</span>
+                </div>
+            </div>
+            <div class="neon-box">
+                <h3 class="text-2xl font-semibold mb-4 neon-text">Web Technologies</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="neon-text px-3 py-1 rounded-full">React</span>
+                    <span class="neon-text px-3 py-1 rounded-full">Node.js</span>
+                    <span class="neon-text px-3 py-1 rounded-full">Express.js</span>
+                    <span class="neon-text px-3 py-1 rounded-full">TailwindCSS</span>
+                </div>
+            </div>
+            <div class="neon-box">
+                <h3 class="text-2xl font-semibold mb-4 neon-text">Design</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="neon-text px-3 py-1 rounded-full">Figma</span>
+                    <span class="neon-text px-3 py-1 rounded-full">Adobe Photoshop</span>
+                </div>
+            </div>
+            <div class="neon-box">
+                <h3 class="text-2xl font-semibold mb-4 neon-text">Databases</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="neon-text px-3 py-1 rounded-full">PostgreSQL</span>
+                </div>
+            </div>
+            <div class="neon-box">
+                <h3 class="text-2xl font-semibold mb-4 neon-text">Tools</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="neon-text px-3 py-1 rounded-full">Visual Studio Code</span>
+                    <span class="neon-text px-3 py-1 rounded-full">Git</span>
+                    <span class="neon-text px-3 py-1 rounded-full">GitHub</span>
+                    <span class="neon-text px-3 py-1 rounded-full">AWS Cloud (Amazon Web Services)</span>
+                </div>
+            </div>
+            <div class="neon-box">
+                <h3 class="text-2xl font-semibold mb-4 neon-text">Others</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="neon-text px-3 py-1 rounded-full">Raspberry Pi</span>
+                    <span class="neon-text px-3 py-1 rounded-full">Arduino</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">© 2025 Jh</p>
+            <div class="footer-links">
+                <a href="https://github.com/theshydreamer" class="footer-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/theshydreamer/" class="footer-link">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
