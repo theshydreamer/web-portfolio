@@ -84,18 +84,18 @@
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 40px; /* Increased spacing between links */
+            gap: 30px;
             margin-top: 8px;
         }
 
         .footer-link {
-            color: #e5e7eb; /* Matches section text color */
+            color: #e5e7eb;
             transition: color 0.3s ease, text-shadow 0.3s ease;
         }
 
         .footer-link:hover {
-            color: #00f9ff; /* Neon cyan hover effect */
-            text-shadow: 0 0 2px #00f9ff, 0 0 5px #00f9ff; /* Matching neon text shadow */
+            color: #00f9ff;
+            text-shadow: 0 0 2px #00f9ff, 0 0 5px #00f9ff;
         }
 
         /* Responsive Adjustments */
@@ -107,7 +107,7 @@
                 padding: 15px;
             }
             .footer-links {
-                gap: 20px; /* Reduced spacing for mobile */
+                gap: 20px;
             }
         }
     </style>
@@ -116,7 +116,7 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-40 shadow-sm">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold neon-text">John Harry</a>
+            <a href="#home" class="text-2xl font-bold neon-text">Jh</a>
             <button id="menu-toggle" class="md:hidden text-2xl text-white focus:outline-none">☰</button>
             <div id="nav-links" class="hidden md:flex space-x-6">
                 <a href="#home" class="nav-link text-lg hover:text-[#00f9ff] transition-colors">Home</a>
@@ -138,7 +138,7 @@
         <div class="container-box">
             <div class="neon-box text-center">
                 <img src="pfp.jpg" alt="Profile" class="mx-auto mb-6 rounded-full w-48 h-48 object-cover border-4 border-[#00f9ff]">
-                <h1 class="text-5xl font-bold mb-4 neon-text">John Harry D. Beato</h1>
+                <h1 class="text-5xl font-bold mb-4 neon-text">John Harry Beato</h1>
                 <p class="text-xl text-gray-300 font-bold mb-6">Web Developer</p>
                 <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
                     <a href="mailto:johnharrybeato@gmail.com" class="neon-button">Get in Touch</a>
@@ -164,8 +164,8 @@
             <div>
                 <h3 class="text-2xl font-semibold mb-4 neon-text">Education</h3>
                 <div class="neon-box">
-                    <h4 class="font-bold">Bachelors Degree</h4>
-                    <p>Computer Engineering</p>
+                    <h4 class="font-bold">Degree</h4>
+                    <p>Bachelor of Science in Computer Engineering</p>
                     <p>Major in System and Network Administration</p>
                     <p>Eastern Samar State University</p>
                     <p>June 2024</p>
@@ -174,7 +174,7 @@
             <div>
                 <h3 class="text-2xl font-semibold mb-4 neon-text">Experience</h3>
                 <div class="neon-box">
-                    <h4 class="font-bold">Internship</h4>
+                    <h4 class="font-bold">Application Development Internship</h4>
                     <p>Libreng Sakay Program</p>
                     <p>City Population Office</p>
                     <p>May - July 2023</p>
@@ -186,29 +186,40 @@
     <!-- Projects Section -->
     <section id="projects" class="container mx-auto px-4 py-16">
         <h2 class="text-4xl font-bold text-center mb-12 neon-text">Projects</h2>
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="neon-box">
                 <img src="ams.png" alt="Attendance Monitoring System" class="w-full h-48 object-contain rounded-t-lg">
                 <div class="p-4">
                     <h3 class="text-2xl font-bold mb-2 neon-text">Attendance Monitoring System</h3>
-                    <p class="mb-4"><strong>Description:</strong> An Attendance Monitoring System using RFID is a technology-based solution designed to track and manage the attendance of individuals within a specific environment of our school. It utilizes RFID cards issued to individuals, which are then scanned by RFID readers placed at entry. This system automatically records the presence or absence of individuals, providing accurate attendance data without the need for manual input.</p>
-                    <p class="text-lg"><strong>Programming Languages & Frameworks:</strong> JavaScript, Node.js, Express.js, PostgreSQL, and Amazon Web Services (AWS)</p>
+                    <p class="mb-4"><strong>Description:</strong> An RFID-based system to track and manage attendance in a school environment. It uses RFID cards and readers to automate presence/absence recording.</p>
+                    <p class="text-lg"><strong>Tech Stack:</strong> JavaScript, Node.js, Express.js, PostgreSQL, AWS</p>
                     <div class="flex flex-col md:flex-row gap-4 mt-4">
-                        <a href="https://project1-live-preview.com" target="_blank" class="neon-button text-center">Live Preview</a>
-                        <a href="https://github.com/janedoe/project1" target="_blank" class="neon-button text-center">GitHub Code</a>
+                        <a href="" target="_blank" class="neon-button text-center">Live Preview</a>
+                        <a href="https://github.com/theshydreamer/RFID-Attendance-Monitoring-System" target="_blank" class="neon-button text-center">GitHub Code</a>
                     </div>
                 </div>
             </div>
             <div class="neon-box">
-                <img src="lt.png" alt="Project 2" class="w-full h-48 object-contain rounded-t-lg">
+                <img src="lt.png" alt="Legislative Tracker" class="w-full h-48 object-contain rounded-t-lg">
                 <div class="p-4">
                     <h3 class="text-2xl font-bold mb-2 neon-text">Legislative Tracker</h3>
-                    <p class="mb-4"><strong>Description:</strong> The Legislative Tracker is a dynamic web application designed to help users monitor the progress of bills, ordinances, and resolutions through the legislative process. This tool offers a comprehensive and user-friendly interface, providing real-time updates and detailed information on legislative activities.</p>
-                    <p class="text-lg"><strong>Programming Languages & Frameworks:</strong> React.js, JavaScript, Node.js, Express.js</p>
-                    <p class="text-lg"><strong>Database & Cloud Services:</strong> PostgreSQL, Amazon Web Services (AWS)</p>
+                    <p class="mb-4"><strong>Description:</strong> A web app to monitor legislative progress, offering real-time updates and a user-friendly interface for bills, ordinances, and resolutions.</p>
+                    <p class="text-lg"><strong>Tech Stack:</strong> React.js, JavaScript, Node.js, Express.js, PostgreSQL, AWS</p>
                     <div class="flex flex-col md:flex-row gap-4 mt-4">
-                        <a href="https://project2-live-preview.com" target="_blank" class="neon-button text-center">Live Preview</a>
-                        <a href="https://github.com/janedoe/project2" target="_blank" class="neon-button text-center">GitHub Code</a>
+                        <a href="" target="_blank" class="neon-button text-center">Live Preview</a>
+                        <a href="https://github.com/theshydreamer/legislative-tracker" target="_blank" class="neon-button text-center">GitHub Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="neon-box">
+                <img src="hrs.png" alt="Hotel Reservation System" class="w-full h-48 object-contain rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-2xl font-bold mb-2 neon-text">Hotel Reservation System</h3>
+                    <p class="mb-4"><strong>Description:</strong> A software solution for managing hotel bookings, room availability, customer data, and payments, enhancing efficiency for guests and staff.</p>
+                    <p class="text-lg"><strong>Tech Stack:</strong> C#, .NET</p>
+                    <div class="flex flex-col md:flex-row gap-4 mt-4">
+                        <a href="" target="_blank" class="neon-button text-center">Live Preview</a>
+                        <a href="https://github.com/theshydreamer/hotel-reservation" target="_blank" class="neon-button text-center">GitHub Code</a>
                     </div>
                 </div>
             </div>
@@ -223,6 +234,7 @@
                 <h3 class="text-2xl font-semibold mb-4 neon-text">Programming Languages</h3>
                 <div class="flex flex-wrap gap-2">
                     <span class="neon-text px-3 py-1 rounded-full">JavaScript</span>
+                    <span class="neon-text px-3 py-1 rounded-full">C#</span>
                     <span class="neon-text px-3 py-1 rounded-full">C++</span>
                     <span class="neon-text px-3 py-1 rounded-full">Java</span>
                 </div>
